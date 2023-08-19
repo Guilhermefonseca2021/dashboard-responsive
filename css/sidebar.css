@@ -1,63 +1,49 @@
-:root {
-    --light: #f6f6f9;
-    --primary: #1976d2;
-    --light-primary: #cfe8ff;
-    --grey: #eee;
-    --dark-grey: #aaaaaa;
-    --danger: #d32f2f;
-    --light-danger: #fecdd3;
-    --warning: #fbc02d;
-    --light-warning: #388e3c;
-    --light-success: #bbf7db;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', Helvetica, sans-serif;
-}
-
-
 .bx{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
-li {
+li{
     list-style: none;
 }
 
-body {
-    overflow: hidden;
+html{
+    overflow-x: hidden;
+}
+
+body.dark{
+    --light: #181a1e;
+    --grey: #25252c;
+    --dark: #fbfbfb
+}
+
+body{
     background: var(--grey);
     overflow-x: hidden;
 }
 
-body.dark {
-    --light: #181a1e;
-    --grey: #25252c;
-    --dark: #fbfbfb;
-}
-
-.sidebar {
+.sidebar{
     position: fixed;
     top: 0;
     left: 0;
     background: var(--light);
     width: 230px;
     height: 100%;
+    z-index: 2000;
     overflow-x: hidden;
     scrollbar-width: none;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
-/* active sidebar */
-.sidebar::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar{
     display: none;
+}
+
+.sidebar.close{
+    width: 60px;
 }
 
 .sidebar.close {
